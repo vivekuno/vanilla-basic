@@ -13,7 +13,11 @@
   },
   "routes": [
     {
-      "route": "/login*",
+      "route": "/login",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/login/azureActiveDirectory",
       "allowedRoles": ["anonymous"]
     },
     {
