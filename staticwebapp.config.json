@@ -1,1 +1,27 @@
-{}
+{
+  "auth": {
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "registration": {
+          "tenant": "a2fcc445-e2c0-4d71-8726-b42f251d475f"
+        }
+      }
+    }
+  },
+  "routes": [
+    {
+      "route": "/login",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/*",
+      "allowedRoles": ["group:e379e92e-5a7e-4dde-b817-e282523a612f"]
+    }
+  ],
+  "responseOverrides": {
+    "unauthorized": {
+      "statusCode": 302,
+      "redirect": "/login"
+    }
+  }
+}
