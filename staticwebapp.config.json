@@ -2,8 +2,11 @@
   "auth": {
     "identityProviders": {
       "azureActiveDirectory": {
+        "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
         "registration": {
-          "tenant": "a2fcc445-e2c0-4d71-8726-b42f251d475f"
+          "openIdIssuer": "https://login.microsoftonline.com/a2fcc445-e2c0-4d71-8726-b42f251d475f/v2.0",
+          "clientIdSettingName": "950603fa-d651-4282-9d71-508245cebdd2",
+          "clientSecretSettingName": "secretkey"
         }
       }
     }
@@ -15,7 +18,7 @@
     },
     {
       "route": "/*",
-      "allowedRoles": ["group:e379e92e-5a7e-4dde-b817-e282523a612f"]
+      "allowedRoles": ["authenticated"]
     }
   ],
   "responseOverrides": {
