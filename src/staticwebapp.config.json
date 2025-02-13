@@ -1,27 +1,8 @@
 {
-  "auth": {
-    "identityProviders": {
-      "azureActiveDirectory": {
-        "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
-        "registration": {
-          "openIdIssuer": "https://login.microsoftonline.com/a2fcc445-e2c0-4d71-8726-b42f251d475f/v2.0",
-          "clientIdSettingName": "950603fa-d651-4282-9d71-508245cebdd2",
-          "clientSecretSettingName": "secretkey"
-        }
-      }
-    }
-  },
+  
   "routes": [
     {
       "route": "/login",
-      "allowedRoles": ["anonymous"]
-    },
-    {
-      "route": "/.auth/login",
-      "allowedRoles": ["anonymous"]
-    },
-    {
-      "route": "/.auth/login/azureActiveDirectory",
       "allowedRoles": ["anonymous"]
     },
     {
