@@ -13,7 +13,7 @@
   },
   "routes": [
     {
-      "route": "/login",
+      "route": "/login*",
       "allowedRoles": ["anonymous"]
     },
     {
