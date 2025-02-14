@@ -4,13 +4,13 @@
     {
       "route": "/TestApp.application",
       "methods": ["GET"],
-      "allowedRoles": ["authenticated"],
+      "allowedRoles": ["anonymous"],
       "statusCode": 200
     },
     {
-      "route": "/TestApp.*",
+      "route": "/Application*",
       "methods": ["GET"],
-      "allowedRoles": ["authenticated"],
+      "allowedRoles": ["anonymous"],
       "statusCode": 200
     },
     {
