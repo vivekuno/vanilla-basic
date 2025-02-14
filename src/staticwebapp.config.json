@@ -2,6 +2,18 @@
   
   "routes": [
     {
+      "route": "/TestApp.application",
+      "methods": ["GET"],
+      "allowedRoles": ["authenticated"],
+      "statusCode": 200
+    },
+    {
+      "route": "/TestApp.*",
+      "methods": ["GET"],
+      "allowedRoles": ["authenticated"],
+      "statusCode": 200
+    },
+    {
       "route": "/login",
       "allowedRoles": ["anonymous"]
     },
