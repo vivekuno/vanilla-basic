@@ -10,10 +10,22 @@
       "allowedRoles": ["authenticated"]
     }
   ],
+  "auth": {
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/a2fcc445-e2c0-4d71-8726-b42f251d475f/v2.0",
+          "clientIdSettingName": "AZURE_CLIENT_ID",
+          "clientSecretSettingName": "AZURE_CLIENT_SECRET_APP_SETTING_NAME"
+        }
+      }
+    }
+  },
   "responseOverrides": {
     "401": {
       "statusCode": 302,
-      "redirect": "/login"
+      "redirect": "/.auth/login/aad"
     }
   }
 }
